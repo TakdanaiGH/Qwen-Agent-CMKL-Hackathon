@@ -29,9 +29,21 @@ This is a FastAPI-based service that leverages the Qwen3-30B-A3B-Thinking-2507 m
 ### Installation
 
 ```bash
-git clone https://github.com/yourusername/medical-reasoning-api.git
-cd medical-reasoning-api
+git clone TakdanaiGH/Qwen-Agent-CMKL-Hackathon.git
+cd Qwen-Agent-CMKL-Hackathon
 pip install -r requirements.txt
 ```
 
-### API
+### Run the API
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+### API Usage
+```bash
+curl -X POST http://YourPort/eval \
+     -H "Content-Type: application/json" \
+     -d '{"question":"ผู้ที่ต้องการใส่ฟันปลอมต้องมีอายุเท่าใดขึ้นไป?  ก. 40 ปี ข. 50 ปี ค. 60 ปี ง. ไม่ได้จำกัดอายุ"}'
+```
+
+
